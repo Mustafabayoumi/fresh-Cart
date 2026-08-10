@@ -32,6 +32,8 @@
 
 body{
     font-family: var(--font-family) !important;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .rating-color
 {
@@ -44,10 +46,6 @@ body{
 a , a:hover{
     color: black;
     text-decoration: none;
-}
-.product:hover
-{
-
 }
 .product .btn 
 {
@@ -108,4 +106,127 @@ a , a:hover{
 .tiktokHover:hover{
 color: #000000;
 text-shadow:-2px -2px 0 rgba(255, 43, 84, 0.75), 2px 2px 0 rgba(0, 245, 255, 0.75);      
+}
+
+.nav-link {
+    position: relative;
+    margin: 0 8px;
+    padding: 8px 12px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #16a34a;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #16a34a;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+.login-link {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #334155;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-link:hover {
+    background-color: #16a34a;
+    color: white;
+}
+
+
+.register-link {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: #16a34a;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.register-link:hover {
+    background-color: #15803d;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+
+.cart-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    color: #334155;
+    font-size: 20px;
+
+    transition: all 0.3s ease;
+}
+
+.cart-link:hover {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+
+.cart-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 20px;
+    height: 20px;
+    padding: 0 4px;
+
+    border-radius: 50%;
+
+    background-color: #16a34a;
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.logout-link {
+    cursor: pointer;
+
+    padding: 8px 20px;
+    border-radius: 8px;
+
+    font-size: 18px;
+    color: #334155;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.logout-link:hover {
+    background-color: #fee2e2;
+    color: #dc2626;
 }
