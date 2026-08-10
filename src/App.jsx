@@ -26,21 +26,18 @@ import Orders from './components/Orders/Orders';
 
 let query = new QueryClient();
 let router = createBrowserRouter([
-  {
-    path: "", element: <Layout />,
-    children: [
-      { index: true, element: <Login /> }, 
-      { path: "home", element: <ProtectedRoute><Home /></ProtectedRoute> },
+      { path: "/",element: <Layout />,children:[
+      { index: true, element: <ProtectedRoute><Home /></ProtectedRoute> },
       { path: "About", element: <ProtectedRoute><About /></ProtectedRoute> },
       { path: "Categories", element: <ProtectedRoute><Categories /></ProtectedRoute> },
       { path: "CategoryDetails/:id", element: <ProtectedRoute><CategoryDetails /></ProtectedRoute> },
       { path: "Brands", element: <ProtectedRoute><Brands /></ProtectedRoute> },
       { path: "BrandDetails/:id", element: <ProtectedRoute><BrandDetails /></ProtectedRoute> },
       { path: "Cart", element: <ProtectedRoute><Cart /></ProtectedRoute> },
-      { path: "Products", element: <ProtectedRoute><Products /></ProtectedRoute> },
+      { path: "Products", element: <ProtectedRoute><Products/></ProtectedRoute>},
       { path: "ProdutDetails/:id/:category", element: <ProtectedRoute><ProdutDetails /></ProtectedRoute> },
-      { path: "Checkout", element: <ProtectedRoute><CheckOut /></ProtectedRoute> },
-      { path: "AllOrders", element: <ProtectedRoute><Orders /></ProtectedRoute> },
+      { path: "Checkout", element: <ProtectedRoute><CheckOut/></ProtectedRoute> },
+      { path: "AllOrders", element: <ProtectedRoute><Orders/></ProtectedRoute> },
       { path: "Login", element: <Login /> },
       { path: "Register", element: <Register /> },
       { path: "*", element: <Notfound /> },
@@ -55,7 +52,7 @@ function App() {
         <UserContextProvider>
           <CounterContextProvider>
             <CartContextProvider>
-              <RouterProvider router={router}></RouterProvider>
+              <RouterProvider router={router}></RouterProvider >
               <ReactQueryDevtools initialIsOpen={false} />
               <Toaster/>
             </CartContextProvider>
